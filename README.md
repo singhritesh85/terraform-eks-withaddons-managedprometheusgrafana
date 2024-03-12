@@ -22,7 +22,7 @@ serviceAccounts:
             eks.amazonaws.com/role-arn: "arn:aws:iam::02733XXXXXXXX:role/eks-amp-serviceaccount-role-dev"   ###  provide the ARN of the IAM Role for different environments.
 server:
     remoteWrite:
-        - url: https://aps-workspaces.us-east-2.amazonaws.com/workspaces/ws-1baa77dd-acb2-4662-8618-9677d6ecaec3/api/v1/remote_write
+        - url: https://aps-workspaces.us-east-2.amazonaws.com/workspaces/ws-1bXX77XX-acb2-XXXX-8XX8-XXXXd6ecXXXX/api/v1/remote_write
           sigv4:
             region: us-east-2
           queue_config:
