@@ -1,4 +1,4 @@
-# Using this terraform script it is possible to create the EKS Cluster with Amazon Managed Prometheus, Amazon Managed Grfana and Add ons namely VPC-CNI, EBS-CSI driver, coredns, kube-proxy, Gurad-Duty for Dev, Stage and Prod Environment
+Using this terraform script it is possible to create the EKS Cluster with Amazon Managed Prometheus, Amazon Managed Grfana and Add ons namely VPC-CNI, EBS-CSI driver, coredns, kube-proxy, Gurad-Duty for Dev, Stage and Prod Environment
 
 
 # Install kubectl 
