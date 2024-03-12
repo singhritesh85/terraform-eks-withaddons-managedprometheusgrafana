@@ -13,6 +13,25 @@ mv kubectl /usr/local/bin
 aws eks update-kubeconfig --name eks-demo-cluster-dev --region us-east-2    
 ```
 
+# create a file mederma.yaml with below content
+```
+serviceAccounts:
+    server:
+        name: "prometheus"           ### Provide the service account name as prometheus here in all the three environments.
+        annotations:
+            eks.amazonaws.com/role-arn: "arn:aws:iam::02733XXXXXXXX:role/eks-amp-serviceaccount-role-dev"   ###  provide the ARN of the IAM Role for different environments.
+server:
+    remoteWrite:
+        - url: https://aps-workspaces.us-east-2.amazonaws.com/workspaces/ws-1baa77dd-acb2-4662-8618-9677d6ecaec3/api/v1/remote_write
+          sigv4:
+            region: us-east-2
+          queue_config:
+            max_samples_per_send: 1000
+            max_shards: 200
+            capacity: 2500
+```
+
+
 # Install prometheus to collect and send that to managed prometheus
 ```
 kubectl create namespace prometheus
