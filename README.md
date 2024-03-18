@@ -13,6 +13,12 @@ mv kubectl /usr/local/bin
 aws eks update-kubeconfig --name eks-demo-cluster-dev --region us-east-2    
 ```
 
+# To list the context and switch context
+```
+kubectl config get-contexts
+kubectl config use-context <CONTEXT_NAME>
+```
+
 # create a file mederma.yaml with below content
 ```
 serviceAccounts:
